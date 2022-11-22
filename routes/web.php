@@ -20,7 +20,13 @@ Route::get('/', [ListingController::class, 'index']);
 // Show Create Form
 Route::get('/listings/create', [ListingController::class, 'create']);
 
-// Single Listings
+// Store Listing Data
+Route::post('/listings', [ListingController::class, 'store']);
+
+
+
+
+// Single Listings (leave me at the bottom of the code)
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
 // Common Resource Routes:
